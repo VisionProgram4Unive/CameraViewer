@@ -1,5 +1,6 @@
 # CameraViewer
-Camera Viewer program at Jetson Board
+
+A camera viewer program at Jetson embedded boards
 
 #### Requirement
 
