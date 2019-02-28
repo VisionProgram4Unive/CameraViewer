@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>843</width>
+    <height>319</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>550</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>label</cstring>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>564</x>
+      <y>10</y>
+      <width>271</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Resolution</string>
+    </property>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>60</y>
+       <width>89</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>confirm</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>251</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>564</x>
+      <y>108</y>
+      <width>271</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Enhance</string>
+    </property>
+    <widget class="QComboBox" name="comboBox_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>251</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>NULL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Brightness</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Contrast</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Saturation</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Sharpening</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Blurring</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Histogram Equalize</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QSpinBox" name="spinBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>219</x>
+       <y>74</y>
+       <width>41</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>76</y>
+       <width>191</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="pageStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBothSides</enum>
+     </property>
+     <property name="tickInterval">
+      <number>0</number>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>799</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>800</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
